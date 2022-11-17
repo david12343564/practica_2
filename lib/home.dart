@@ -70,13 +70,6 @@ class _HomeState extends State<Home> {
                             content: Text("No se encontró la canción")));
                     }
                   });
-                  // if (context.read<musicProvider>().getCancion != null) {
-                  //   Navigator.of(context).push(MaterialPageRoute(
-                  //       builder: (context) => seleccion(
-                  //             songData:
-                  //                 context.read<musicProvider>().getCancion,
-                  //           )));
-                  // }
                 },
                 shape: CircleBorder(),
               ),

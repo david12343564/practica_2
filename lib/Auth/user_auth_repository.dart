@@ -6,8 +6,6 @@ class UserAuthRepository {
   final GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ["email"]);
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  // true -> go home page
-  // false -> go login page
   bool isAlreadyAuthenticated() {
     return _auth.currentUser != null;
   }

@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:developer';
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -13,9 +12,6 @@ import 'package:record/record.dart';
 class musicProvider with ChangeNotifier {
   List<dynamic> _favoritos = [];
   List<dynamic> get getListaFavs => _favoritos;
-
-  bool _inFavs = false;
-  bool get isFav => _inFavs;
 
   APIRep peticion = APIRep();
   Record _record = Record();
@@ -60,7 +56,6 @@ class musicProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  //Para agregar y borrar de favoritos
   Future<void> addSong(dynamic song) async {
     try {
       FirebaseFirestore.instance
